@@ -116,12 +116,13 @@ and `install lxml <http://lxml.de/installation.html>`__.
 Open cmd and go to the `labelImg <#labelimg>`__ directory
 
 .. code:: shell
-
-    pyrcc4 -o line/resources.py resources.qrc
-    For pyqt5, pyrcc5 -o libs/resources.py resources.qrc
     
-    python labelImg.py
-    python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+    pip install pipenv
+    cd labelImage
+    pipenv --three
+    pipenv run pip install pyqt5 lxml
+    pipenv run pyrcc5 -o libs/resources.py resources.qrc
+    pipenv python labelImg.py
 
 Windows + Anaconda
 ^^^^^^^^^^^^^^^^^^
